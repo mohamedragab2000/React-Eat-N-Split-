@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 5vw;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 40vw;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px 0px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.friend-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.friend-info-button {
+    background: orange;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.friend-info-button:hover {
+    background: rgb(157, 142, 1);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: large;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 5px;
+}
+
+.form-add-friend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e0852446;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-add-friend input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
+.form-add-friend div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.carry-button {
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-add-friends {
+    background: orange;
+    width: 30%;
+    border: none;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+.btn-add-friend {
+    background: orangered;
+    width: 30%;
+    border: none;
+    display: block;
+    padding: 10px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+.btn-add-friends:hover, .btn-add-friend:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.friend-Add-button {
+    background: orange;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.form-split-friend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40vw;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e0852446;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-split-friend input,
+.form-split-friend select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Prevents zoom on iOS */
+}
+
+.form-split-friend select {
+    width: 48%;
+}
+
+.form-split-friend div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.selected {
+    background-color: #e7ded1;
+    border-left: 4px solid orange;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    ul, .form-split-friend {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    
+    li {
+        padding: 15px 0;
+        flex-wrap: wrap;
+    }
+    
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+    }
+    
+    .friend-info {
+        flex-basis: calc(100% - 130px);
+    }
+    
+    .friend-info-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .form-add-friend, .form-split-friend {
+        padding: 12px;
+    }
+    
+    .btn-add-friends, .btn-add-friend {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .form-split-friend select {
+        width: 100%;
+    }
+    
+    .form-split-friend div {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    li {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .friend-info {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .friend-info-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .form-add-friend div {
+        flex-direction: column;
+    }
+}
